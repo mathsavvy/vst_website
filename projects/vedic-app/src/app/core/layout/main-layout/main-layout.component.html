@@ -1,0 +1,123 @@
+<div id="wrapper" ngClass='{"tv_wrapper": !isHeader}' role="main">
+  <video autoplay muted loop id="myVideo">
+    <source [src]="bgValue" type="video/mp4">
+  </video>
+
+  <div class="nav_wrap_mob">
+
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+      <a [routerLink]="'/home'" class="navbar-brand">
+        <div class="logo">Aarohanam</div>
+      </a>
+      <div id="myLinks" [ngStyle]="{ 'display': isMenu ? 'block' : 'none' }">
+        <a (click)="toggleClick()" [routerLink]="'/content/chronology'" class="nav-item nav-link"
+            >Chronology</a
+          >
+          <a (click)="toggleClick()" [routerLink]="'/content/aboutus'" class="nav-item nav-link"
+            >About Us</a
+          >
+          <a (click)="toggleClick()" [routerLink]="'/content/contactus'" class="nav-item nav-link"
+            >Contact Us</a
+          >
+      </div>
+      <a class="icon pointer" (click)="toggleClick()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    
+    <!-- End smartphone / tablet look -->
+    </div>
+  <!-- Header Section Start Here-->
+  <ng-container *ngIf="isHeader">
+    <header class="fixed-top header_wrap_desk">
+      <div class="container">
+        <a [routerLink]="'/home'" class="navbar-brand">
+          <div class="logo">Aarohanam</div>
+        </a>
+        <div class="menu-links">
+          <ul class="toggle-menu">
+            <li class="content fast" *ngIf="isMenu">
+              <ul>
+                <li>
+                  <a
+                    routerLinkActive="active"
+                    [routerLink]="'/content/chronology'"
+                    >Chronology</a
+                  >
+                </li>
+                <li>
+                  <a routerLinkActive="active" [routerLink]="'/content/aboutus'"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    routerLinkActive="active"
+                    [routerLink]="'/content/contactus'"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="toggle" (click)="toggleClick()">
+              <div id="corss_bar" [ngClass]="{ open: isMenu }">
+                <span class="toggle-menu-bar"></span>
+                <span class="toggle-menu-bar"></span>
+                <span class="toggle-menu-bar"></span>
+                <span class="toggle-menu-bar"></span>
+                <span class="toggle-menu-bar"></span>
+                <span class="toggle-menu-bar"></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- Header Section End Here-->
+  </ng-container>
+  <router-outlet></router-outlet>
+  <ng-container *ngIf="isHeader">
+  <div class="footer_wrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-3 grid_mob">
+          <div class="footer_logo">
+            <a [routerLink]="'/home'">
+              <img src="assets/ved-logo.jpeg" alt="logo" class="img-width-footer" />
+            </a>
+          </div>
+        </div>
+        <div class="col-6 grid_mob">
+          <div class="footer_menus">
+            <ul>
+              <li><a [routerLink]="'/content/chronology'">Chronology </a></li>
+              <li><a [routerLink]="'/content/aboutus'">About Us </a></li>
+              <li><a [routerLink]="'/content/contactus'">Contact Us </a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-3 grid_mob">
+          <div class="footer_socials">
+            <ul>
+              <li>
+                <a [routerLink]="'/home'"><i class="fab fa-facebook-f"></i> </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/invites/contact/?i=1tey8hm1g0r6c&utm_content=kmtkrxk"
+                  target="_blank"
+                  ><i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a [routerLink]="'/home'"><i class="fab fa-twitter"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </ng-container>
+</div>

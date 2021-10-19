@@ -1,0 +1,70 @@
+<!-- Bananer Section Start Here-->
+<div class="banner_section">
+  <div class="left_corner_img">
+    <img src="assets/images/left_corner.png" alt="" />
+  </div>
+  <div class="right_corner_img">
+    <img src="assets/images/right_corner.png" alt="" />
+  </div>
+  <div class="container container-clock">
+    <div class="middle_content_wrap">
+      <span>{{ getDate | date: 'longDate' }}</span>
+      <h2>{{ time }}</h2>
+      <p>{{ muhuratName }}</p>
+      <p>{{ timeObject?.location }}</p>
+    </div>
+    <div class="clock_time_wrap">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="left_clocks">
+              <div class="clock_card">
+                <div class="clock_image">
+                  <img src="assets/images/clock_imgs.png" alt="" />
+                </div>
+                <div class="clock_content">
+                  <span>GMT</span>
+                  <p>{{ gmtTime | date: 'shortTime' }}</p>
+                </div>
+              </div>
+              <div class="clock_card">
+                <div class="clock_image">
+                  <img src="assets/images/clock_imgs.png" alt="" />
+                </div>
+                <div class="clock_content">
+                  <span>IST</span>
+                  <p>{{ istTime | date: 'shortTime' }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="clock_card weather_wrap">
+              <div class="row">
+                <div class="col border_right">
+                  <div class="wheather_wrap">
+                    <img src="assets/images/wether_img.png" alt="" />
+                    <p>{{ weatherObject?.temp_c || '- ' }}°C</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="wheaterspeed">
+                    <img src="assets/images/wheater_1.png" alt="" />
+                    <span>Humidity</span>
+                    <p>{{ weatherObject?.humidity || '- ' }}°</p>
+                  </div>
+                  <div class="wheaterspeed">
+                    <img src="assets/images/wheater_2.png" alt="" />
+                    <span>WIND</span>
+                    <p>{{ weatherObject?.wind_kph || '- ' }} km/h</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Banner Section End Here-->

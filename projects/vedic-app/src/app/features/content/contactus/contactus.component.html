@@ -1,0 +1,146 @@
+<!-- Contact Us Section Start Here-->
+<div class="banner_about_wrap">
+  <div class="left_corner_img">
+    <img src="assets/images/left_corner.png" alt="" />
+  </div>
+  <div class="right_corner_img">
+    <img src="assets/images/right_corner.png" alt="" />
+  </div>
+  <div class="about_us_wrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="about_cont_wrap contact_us_wrap">
+            <span>Contact Us</span>
+            <h2>
+              We would love <br />
+              to hear from you.
+            </h2>
+            <div class="contact_us_card">
+              <label for=""> Email Us</label>
+              <p>info@Vedicstandardtime.com</p>
+            </div>
+            <div class="contact_us_card">
+              <label for="">Call Us</label>
+              <p>+91 998 4309 907</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="contact_us_form">
+            <ng-container *ngIf="success">
+              <p [ngClass]="{ 'success-msg': success }">
+                Successfully submitted, we will get back to you soon
+              </p>
+            </ng-container>
+            <form [formGroup]="contactFormGroup" (ngSubmit)="submit()">
+              <div class="common_input_wrap">
+                <div class="form-group">
+                  <input
+                    type="text "
+                    class="form-control"
+                    placeholder=" "
+                    formControlName="name"
+                  />
+                  <span class="floating_label">Name</span>
+                  <div
+                    class="err"
+                    *ngIf="
+                      contactFormGroup?.get('name')?.touched &&
+                      contactFormGroup?.get('name')?.status === 'INVALID'
+                    "
+                  >
+                    <vedic-validation-errors
+                      [errors]="contactFormGroup?.get('name')?.errors"
+                    ></vedic-validation-errors>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text "
+                    class="form-control"
+                    placeholder=" "
+                    formControlName="email"
+                  />
+                  <span class="floating_label">Email ID</span>
+                  <div
+                    class="err"
+                    *ngIf="
+                      contactFormGroup?.get('email')?.touched &&
+                      contactFormGroup?.get('email')?.status === 'INVALID'
+                    "
+                  >
+                    <vedic-validation-errors
+                      [errors]="contactFormGroup?.get('email')?.errors"
+                    ></vedic-validation-errors>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input
+                    class="form-control"
+                    placeholder=" "
+                    formControlName="mobile"
+                    type="number"
+                    (input)="restrict($event)"
+                  />
+                  <span class="floating_label">Contact Number</span>
+                  <div
+                    class="err"
+                    *ngIf="
+                      contactFormGroup?.get('mobile')?.touched &&
+                      contactFormGroup?.get('mobile')?.status === 'INVALID'
+                    "
+                  >
+                    <vedic-validation-errors
+                      [errors]="contactFormGroup?.get('mobile')?.errors"
+                    ></vedic-validation-errors>
+                  </div>
+                </div>
+                <!-- <div class="form-group">
+                  <div class="file-upload">
+                    <div class="file-select">
+                      <div class="file-select-name" id="noFile">
+                        Upload File (optional)
+                      </div>
+                      <div class="file-select-button" id="fileName">
+                        <img src="assets/images/up_arrow.png" alt="" />
+                      </div>
+                      <input type="file" name="chooseFile" id="chooseFile" />
+                    </div>
+                  </div>
+                </div> -->
+                <div class="form-group">
+                  <textarea
+                    class="form-control"
+                    name=""
+                    id=""
+                    cols="30"
+                    rows="10"
+                    placeholder=" "
+                    formControlName="message"
+                  ></textarea>
+                  <span class="floating_label">Message</span>
+                  <div
+                    class="err"
+                    *ngIf="
+                      contactFormGroup?.get('message')?.touched &&
+                      contactFormGroup?.get('message')?.status === 'INVALID'
+                    "
+                  >
+                    <vedic-validation-errors
+                      [errors]="contactFormGroup?.get('message')?.errors"
+                    ></vedic-validation-errors>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" [disabled]="isDisabled">
+                <i *ngIf="isDisabled" class="fa fa-spinner fa-spin"></i>
+                {{ isDisabled ? ' sending' : 'Submit' }}
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

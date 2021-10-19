@@ -1,0 +1,271 @@
+.banner_about_wrap {
+  position: relative;
+  background: #12081d;
+  background-size: cover;
+  background-position: top center;
+  margin-top: 0px;
+  height: auto;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 2000px rgb(66 66 66 / 28%);
+}
+.banner_about_wrap .left_corner_img,
+.banner_about_wrap .right_corner_img {
+  position: absolute;
+  left: -6%;
+  top: 100px;
+  width: 40%;
+  -webkit-animation: spin 100s linear infinite;
+  -moz-animation: spin 100s linear infinite;
+  animation: spin 100s linear infinite;
+}
+.banner_about_wrap .right_corner_img {
+  left: inherit;
+  right: -25%;
+  top: 10%;
+  width: 60%;
+  -webkit-animation: spin 120s linear infinite;
+  -moz-animation: spin 120s linear infinite;
+  animation: spin 120s linear infinite;
+}
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.banner_about_wrap .left_corner_img img,
+.banner_about_wrap .right_corner_img img {
+  width: 100%;
+  height: auto;
+}
+.about_us_wrap {
+  margin-top: 150px;
+}
+.about_cont_wrap {
+  position: relative;
+  padding-right: 100px;
+}
+.about_cont_wrap span {
+  display: block;
+  font-size: 24px;
+  color: #fff;
+  padding-bottom: 15px;
+  font-family: 'Poppins-Medium';
+  border-bottom: 1px solid #fff;
+}
+.about_cont_wrap h2 {
+  font-size: 74px;
+  color: #fff;
+  margin: 40px 0 30px 0;
+  font-family: 'Poppins-Bold';
+}
+.about_cont_wrap p {
+  font-size: 24px;
+  line-height: 36px;
+  color: #fff;
+  font-family: 'Poppins-Light';
+}
+.about_right_banner {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 16px;
+}
+.about_right_banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about_cont_wrap.youtube_wrap {
+  margin-top: 140px;
+  margin-bottom: 150px;
+  padding-right: 0;
+}
+.about_cont_wrap.youtube_wrap h2,
+.about_cont_wrap.youtube_wrap p {
+  text-align: center;
+}
+.about_cont_wrap.youtube_wrap .about_right_banner {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  padding: 0 150px;
+  margin-top: 70px;
+}
+
+.chronology_wrap {
+  padding-bottom: 150px;
+}
+.chrnology_videos {
+  padding: 0 100px;
+  margin: 50px 0;
+}
+.chrnology_videos img {
+  width: 100%;
+  height: auto;
+}
+.paragraph_second h2 {
+  margin-bottom: 30px !important;
+}
+.about_cont_wrap.vadic_devices_wrap {
+  margin-top: 70px;
+}
+.clock_images_card {
+  margin-top: 40px;
+}
+.vadic_clock {
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+.vadic_clock img {
+  width: 100%;
+  height: auto;
+}
+@media only screen and (max-width: 1600px) {
+  .about_cont_wrap h2 {
+    font-size: 54px;
+    margin: 24px 0 15px 0;
+  }
+  .about_cont_wrap p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .about_cont_wrap {
+    padding-right: 0px;
+  }
+}
+@media only screen and (max-width: 1540px) {
+  .about_cont_wrap h2 {
+    font-size: 48px;
+  }
+  .about_cont_wrap p {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .about_right_banner {
+    height: 500px;
+  }
+  .about_cont_wrap span {
+    font-size: 20px;
+    padding-bottom: 14px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .about_cont_wrap h2 {
+    font-size: 40px;
+  }
+  .about_cont_wrap p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .about_cont_wrap.youtube_wrap {
+    margin-top: 100px;
+    margin-bottom: 120px;
+  }
+  .about_cont_wrap.youtube_wrap .about_right_banner {
+    padding: 0 120px;
+    margin-top: 50px;
+  }
+  .about_cont_wrap {
+    padding-right: 0px;
+  }
+}
+@media only screen and (max-width: 1320px) {
+  .about_cont_wrap.youtube_wrap .about_right_banner {
+    padding: 0 100px;
+  }
+}
+@media only screen and (max-width: 1220px) {
+}
+@media only screen and (max-width: 1200px) {
+  .about_cont_wrap h2 {
+    font-size: 36px;
+  }
+  .about_cont_wrap.youtube_wrap {
+    margin-top: 60px;
+    margin-bottom: 120px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+}
+@media only screen and (max-width: 991px) {
+  .chrnology_videos {
+    padding: 0 0px;
+    margin: 15px 0;
+  }
+  .vadic_clock {
+    overflow: hidden;
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .about_us_wrap {
+    margin-top: 80px;
+  }
+  .about_cont_wrap.vadic_devices_wrap {
+    margin-top: 30px;
+  }
+  .about_cont_wrap {
+    position: relative;
+    padding-right: 0px;
+  }
+  .about_cont_wrap span {
+    display: block;
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+  .about_cont_wrap h2 {
+    font-size: 22px;
+    line-height: 35px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+  .about_cont_wrap p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .about_right_banner {
+    height: 330px;
+  }
+  .about_cont_wrap.youtube_wrap .about_right_banner {
+    height: 200px;
+    overflow: hidden;
+    padding: 0 20px;
+  }
+  .about_cont_wrap.youtube_wrap .about_right_banner img {
+    width: 100%;
+    object-fit: inherit;
+  }
+  .about_cont_wrap.youtube_wrap {
+    margin-top: 60px;
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (max-width: 414px) {
+}
+
+.device-info {
+  color: #fff;
+  font-family: 'Poppins-Light';
+  cursor: pointer;
+  padding-top: 5px;
+}
+
+@media only screen and (max-width: 1439px) {
+  .device-info {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
